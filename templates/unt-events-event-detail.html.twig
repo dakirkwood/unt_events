@@ -1,0 +1,16 @@
+
+<div>
+<ul class="event-details">
+  <li><strong>Date:</strong> {{ date }}</li>
+  <li><strong>Location:</strong> {{ location }}</li>
+  <li><strong>Contact:</strong>
+    <a href="mailto:{{ contact_email }}" alt="Send an email to {{ contact_name }} about this event">{{ contact_name }}</a>
+  </li>
+  <li><strong>Sponsored by:</strong> <em>{{ department }}</em></li>
+</ul>
+  {% if image %}
+    <img class="event-details-image" src="{{ image }}" alt="" />
+  {% endif %}
+
+  {{ details }}
+</div>

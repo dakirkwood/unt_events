@@ -1,0 +1,11 @@
+services:
+  unt_events_client:
+    class: Drupal\unt_events\UntEventsClient
+    arguments:
+      - '@http_client_factory'
+
+  unt_api_listener:
+    class: Drupal\unt_events\UntApiListener
+    arguments: []
+    tags:
+      - { name: 'event_subscriber' }

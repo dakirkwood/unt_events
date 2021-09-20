@@ -1,0 +1,29 @@
+{#
+/**
+* @file
+* Default theme implementation to display a block.
+*
+* @see template_preprocess_block()
+*
+* @ingroup themeable
+*
+#}
+{% for event in content %}
+<div class="listing event">
+  <div class="event-date">
+    <div class="date-month">
+      {{ event['eventMonth']|striptags }}
+    </div>
+    <div class="date-day">
+      {{ event['eventDate']|striptags }}
+    </div>
+  </div>
+  <div class="event-details">
+    <h3 class="title"><a href="/event/{{ event['eventId'] }}">{{ event['eventTitle'] }}</a></h3>
+    <div class="info">
+      <span class="info-dept">{{ event['eventDept'] }}</span><br />
+      <span class="info-location">{{ event['eventLocation'] }}</span>
+    </div>
+  </div>
+</div>
+{% endfor %}

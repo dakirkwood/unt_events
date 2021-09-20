@@ -1,0 +1,8 @@
+
+unt_events.campus_events_controller_showEvent:
+  path: /event/{eventId}
+  defaults:
+    _controller: \Drupal\unt_events\Controller\CampusEventsController::showEvent
+
+  requirements:
+    _permission: 'access content'
